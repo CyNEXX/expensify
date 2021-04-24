@@ -13,5 +13,5 @@ const ExpenseListItem = ({ amount, createdAt, count, description, id }) => {
 
 
 
-export default ExpenseListItem
+export default ExpenseListItem;
 
