@@ -13,8 +13,8 @@
     "heroku-postbuild": "npm run build:prod"
   },
   "engines": {
-    "node": "=15.9.0",
-    "npm": "=7.5.3"
+    "node": "15.9.0",
+    "npm": "7.5.3"
   },
   "dependencies": {
     "@babel/cli": "^7.13.0",
