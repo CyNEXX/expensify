@@ -4,7 +4,7 @@ import ExpenseListItem from '../../components/ExpenseListItem';
 import expenses from '../fixtures/expenses';
 
 
-test('Should render EXpenseListItem with expense', () => {
+test('Should render ExpenseListItem with expense', () => {
     const wrapper = shallow(<ExpenseListItem {...expenses[0]} />);
     expect(wrapper).toMatchSnapshot();
 });
