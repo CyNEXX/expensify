@@ -24,7 +24,6 @@ test('Should filter by start date', () => {
     };
     const result = selectExpenses(expenses, filters);
     expect(result).toEqual([expenses[2], expenses[0]]);
-    /* expect(result.length).toBe(2); */
 });
 
 test('Should test by end date', () => {
