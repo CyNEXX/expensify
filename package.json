@@ -49,7 +49,7 @@
     "webpack-cli": "^4.5.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "CyNEXX",
   "description": "",
   "devDependencies": {
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
