@@ -1,20 +1,28 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
-export const Header = ({ startLogout }) => (
-    <header>
-        <h1>Expensify</h1>
-        <NavLink to="/dashboard" activeClassName='is-active'>Dashboard</NavLink>
-        <NavLink to="/create" activeClassName='is-active'>Create Expense</NavLink>
-        <button onClick={startLogout}>Log Out</button>
-    </header>
-);
+export const Header = ({ startLogout, displayName, photoURL }) => {
+    return (
+        <div className='bg-dark text-light px-3'>
+            <div className='content-container d-flex justify-content-between py-2'>
+                <Link className='font-weight-bold text-light h2 mb-0' to="/dashboard">expensify</Link>
+                <div className="justify-content-end text-light">
+                    <span>Signed in as: </span><span className='font-weight-bold'>{displayName}</span>
+                    <img className='profile_pic mx-3' src={photoURL} alt='Profile picture'></img>
+                    <Button type='button' id='signout' className='btn btn-dark btn-outline-light' onClick={startLogout}>Sign Out</Button>
+                </div>
+            </div>
+        </div>
+    )
+};
 
 const mapDispatchToProps = (dispatch) => ({
     startLogout: () => dispatch(startLogout())
 });
+
 
 export default connect(undefined, mapDispatchToProps)(Header);

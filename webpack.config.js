@@ -43,11 +43,25 @@ module.exports = (env) => {
             }, {
                 use: [MiniCssExtractPlugin.loader, {
                     loader: "css-loader",
-                    options: { sourceMap: true }
+                    options: { sourceMap: true, url: false }
                 }, {
                     loader: "sass-loader",
                     options: { sourceMap: true }
-                }],
+                }/* , {
+                    loader: 'postcss-loader', // Run post css actions
+                    options: {
+                        postcssOptions: {
+                            plugins: [
+                                [
+                                    "postcss-preset-env",
+                                    {
+                                        // Options
+                                    },
+                                ],
+                            ],
+                        },
+                    }
+                } */],
                 test: /\.s?css$/
             }]
         },

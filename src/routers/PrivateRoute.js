@@ -6,13 +6,15 @@ import Header from '../components/Header';
 
 export const PrivateRoute = ({
     isAuthenticated,
+    displayName,
+    photoURL,
     component: Component,
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
         isAuthenticated ? (
             <div>
-                <Header />
+                <Header displayName={displayName} photoURL={photoURL} />
                 <Component {...props} />
             </div>
         ) : (
@@ -21,8 +23,12 @@ export const PrivateRoute = ({
     )} />
 );
 
-const mapStateToProps = (state) => ({
-    isAuthenticated: !!state.auth.uid
-});
+const mapStateToProps = (state) => {
+    return {
+        isAuthenticated: !!state.auth.uid,
+        displayName: state.auth.displayName,
+        photoURL: state.auth.photoURL
+    }
+};
 
 export default connect(mapStateToProps)(PrivateRoute);

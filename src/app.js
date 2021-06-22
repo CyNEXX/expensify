@@ -6,10 +6,16 @@ import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
+import LoadingPage from './components/LoadingPage';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import 'normalize.css/normalize.css'
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import { stable } from 'core-js';
+import { regeneratorRuntime } from 'regenerator-runtime';
+
 
 import { firebase } from './firebase/firebase';
 
@@ -29,12 +35,11 @@ const renderApp = () => {
     }
 };
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        console.log('Log In');
-        store.dispatch(login(user.uid));
+        store.dispatch(login(user.uid, user.displayName, user.photoURL));
         store.dispatch(startSetExpenses()).then(() => {
             renderApp();
             if (history.location.pathname == '/') {
@@ -42,10 +47,8 @@ firebase.auth().onAuthStateChanged((user) => {
             }
         });
     } else {
-        console.log('Log Out');
         store.dispatch(logout());
         renderApp();
         history.push('/');
     };
 });
-

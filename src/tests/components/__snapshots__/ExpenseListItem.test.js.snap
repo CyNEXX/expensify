@@ -1,19 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render ExpenseListItem with expense 1`] = `
-<div>
-  <h3>
-    . 
-    <Link
-      to="/edit/1"
+<Link
+  className="d-flex flex-lg-row flex-sm-column justify-content-between px-3 border border-top-0"
+  to="/edit/1"
+>
+  <div
+    className="py-3 d-flex flex-column pr-4"
+  >
+    <h3
+      className="text-dark font-weight-bold text-break"
     >
       gum
-    </Link>
-  </h3>
-  <p>
+    </h3>
+    <small
+      className="text-muted"
+    >
+      01 January 1970
+    </small>
+  </div>
+  <div
+    className="my-auto h5 font-weight-bold pb-3"
+  >
     $195.00
-    -
-    01 January 1970
-  </p>
-</div>
+  </div>
+</Link>
 `;
