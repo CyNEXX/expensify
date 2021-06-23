@@ -69,23 +69,27 @@ export default class ExpenseForm extends React.Component {
             <form onSubmit={this.onSubmit}>
                 {this.state.error && <p className='font-italic text-danger'>{this.state.error}</p>}
                 <div className='d-flex flex-column form'>
-                    <input
-                        className='basic-input px-3'
-                        type='text'
-                        placeholder='Decription'
-                        autoFocus
-                        value={this.state.description}
-                        onChange={this.onDescriptionChange}>
-                    </input>
-                    <div className='d-flex justify-content-between'>
+                    <div className='d-flex flex-wrap col-12'>
                         <input
-                            className='basic-input col-6'
+                            className='basic-input w-100 px-3'
                             type='text'
-                            value={this.state.amount}
-                            placeholder='Amount'
-                            onChange={this.onAmountChange}>
+                            placeholder='Decription'
+                            autoFocus
+                            value={this.state.description}
+                            onChange={this.onDescriptionChange}>
                         </input>
-                        <div className='date-container col-6 pr-0'>
+                    </div>
+                    <div className='d-flex flex-sm-column flex-xl-row justify-content-between col-12'>
+                        <div /* className='col-sm-12 col-xl-6' */ className='flex-fill mr-xl-2 mb-sm-2 mb-xl-0'>
+                            <input
+                                className='basic-input w-100 px-3'
+                                type='text'
+                                value={this.state.amount}
+                                placeholder='Amount'
+                                onChange={this.onAmountChange}>
+                            </input>
+                        </div>
+                        <div className='date-container' className='flex-fill ml-xl-2 mt-sm-2 mt-xl-0'/* col-sm-12 col-xl-6' */>
                             <SingleDatePicker
                                 date={this.state.createdAt} // momentPropTypes.momentObj or null
                                 onDateChange={this.onDateChange} // PropTypes.func.isRequired
@@ -97,15 +101,17 @@ export default class ExpenseForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <textarea
-                        className='basic-textarea px-3 py-3'
-                        type='text'
-                        placeholder='Add a description for this expense (optional)'
-                        value={this.state.note}
-                        onChange={this.onNoteChange}>
-                    </textarea>
-                    <div className='mb-0'>
-                        <button className='btn btn-primary'>
+                    <div className='d-flex col-12'>
+                        <textarea
+                            className='basic-textarea w-100 px-3'
+                            type='text'
+                            placeholder='Add a description for this expense (optional)'
+                            value={this.state.note}
+                            onChange={this.onNoteChange}>
+                        </textarea>
+                    </div>
+                    <div className='mb-0 px-3 col-xl-3 col-sm-12'>
+                        <button className='btn btn-primary w-100'>
                             {this.state.editForm ? 'Save Expense' : 'Add Expense'}
                         </button>
                     </div>
@@ -115,49 +121,3 @@ export default class ExpenseForm extends React.Component {
         )
     }
 }
-
-/* <Container fluid>
-                    <Row>
-                        <Col lg={2}>
-                            <input
-                                className='basic-input w-100'
-                                type='text'
-                                placeholder='Decription'
-                                autoFocus
-                                value={this.state.description}
-                                onChange={this.onDescriptionChange}>
-                            </input>
-                        </Col>
-                        <Col lg={3}>
-                            <input
-                                className='basic-input'
-                                type='text'
-                                value={this.state.amount}
-                                placeholder='Amount'
-                                onChange={this.onAmountChange}>
-                            </input></Col>
-                        <Col lg={2}>
-                            <SingleDatePicker
-                                date={this.state.createdAt}
-                                onDateChange={this.onDateChange}
-                                focused={this.state.calendarFocused}
-                                onFocusChange={this.onFocusChange}
-                                numberOfMonths={1}
-                                isOutsideRange={(day) => false}
-
-                            /></Col>
-                        <Col lg={3}>
-                            <textarea
-                                className='basic-textarea'
-                                type='text'
-                                placeholder='Add a description for this expense (optional)'
-                                value={this.state.note}
-                                onChange={this.onNoteChange}>
-                            </textarea></Col>
-                        <Col lg={2}>
-                            <button>
-                                {this.state.editForm ? 'Save Expense' : 'Add Expense'}
-                            </button>
-                        </Col>
-                    </Row>
-                </Container> */

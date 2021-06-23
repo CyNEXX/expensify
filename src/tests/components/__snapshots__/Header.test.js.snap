@@ -2,10 +2,10 @@
 
 exports[`Should render Header correctly 1`] = `
 <div
-  className="bg-dark text-light px-3"
+  className="bg-dark text-light"
 >
   <div
-    className="content-container d-flex justify-content-between py-2"
+    className="content-container d-flex justify-content-between py-2 px-3"
   >
     <Link
       className="font-weight-bold text-light h2 mb-0"

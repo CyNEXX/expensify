@@ -4,10 +4,12 @@ import ExpenseListFilters from './ExpenseListFilters';
 import ExpensesSummary from './ExpensesSummary';
 
 const ExpenseDashboardPage = () => (
-    <div>
+    <div className='d-flex justify-content-between flex-column'>
         <ExpensesSummary />
-        <ExpenseListFilters />
-        <ExpenseList />
+        <div className='fieldgroup content-container flex-column w-100'>
+            <ExpenseListFilters />
+            <ExpenseList />
+        </div>
     </div>
 );
 

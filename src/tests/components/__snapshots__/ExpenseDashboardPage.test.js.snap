@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render ExpenseDashboardPage 1`] = `
-<div>
+<div
+  className="d-flex justify-content-between flex-column"
+>
   <Connect(ExpensesSummary) />
-  <Connect(ExpenseListFilters) />
-  <Connect(ExpenseList) />
+  <div
+    className="fieldgroup content-container flex-column w-100"
+  >
+    <Connect(ExpenseListFilters) />
+    <Connect(ExpenseList) />
+  </div>
 </div>
 `;

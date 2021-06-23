@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 export const Header = ({ startLogout, displayName, photoURL }) => {
     return (
-        <div className='bg-dark text-light px-3'>
-            <div className='content-container d-flex justify-content-between py-2'>
+        <div className='bg-dark text-light'>
+            <div className='content-container d-flex justify-content-between py-2 px-3'>
                 <Link className='font-weight-bold text-light h2 mb-0' to="/dashboard">expensify</Link>
                 <div className="justify-content-end text-light">
                     <span>Signed in as: </span><span className='font-weight-bold'>{displayName}</span>

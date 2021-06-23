@@ -120,3 +120,8 @@ body {
     background-color: rgba(34, 49, 63, 0.8);
     color: $aliceblue;
 }
+
+.fieldgroup {
+    @extend .d-flex;
+    @extend .justify-content-between;
+}

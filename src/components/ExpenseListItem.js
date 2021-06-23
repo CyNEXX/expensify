@@ -4,7 +4,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 
 const ExpenseListItem = ({ amount, createdAt, count, description, id }) => (
-    <Link className='d-flex flex-lg-row flex-sm-column justify-content-between px-3 border border-top-0' to={`/edit/${id}`}>
+    <Link className='col-12 fieldgroup flex-xl-row flex-sm-column border border-top-0' to={`/edit/${id}`}>
         <div className='py-3 d-flex flex-column pr-4'>
             <h3 className='text-dark font-weight-bold text-break'>{description}</h3>
             <small className='text-muted'>

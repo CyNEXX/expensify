@@ -2,23 +2,23 @@
 
 exports[`Should render ExpenseList with empty message 1`] = `
 <div
-  className="content-container"
+  className="fieldgroup col-12 flex-column"
 >
   <div
-    className="d-flex justify-content-between bg-dark basic-input border text-light"
+    className="fieldgroup col-12 bg-dark basic-input border text-light py-3"
   >
     <div
-      className="pl-3 my-auto d-none d-md-block d-lg-none"
+      className="pl-1 my-auto d-none d-sm-block d-xl-none"
     >
       Expenses
     </div>
     <div
-      className="pl-3 my-auto d-md-none d-lg-block"
+      className="pl-1 my-auto d-sm-none d-xl-block"
     >
       Expense
     </div>
     <div
-      className="pr-3 my-auto d-md-none d-lg-block"
+      className="pr-1 my-auto d-sm-none d-xl-block"
     >
       Amount
     </div>
@@ -27,7 +27,7 @@ exports[`Should render ExpenseList with empty message 1`] = `
     className="fieldarray mb-5"
   >
     <div
-      className="content-container d-flex justify-content-center py-3 font-italic text-muted"
+      className="d-flex py-3 font-italic text-muted justify-content-center"
     >
       <h5>
         No expense
@@ -39,23 +39,23 @@ exports[`Should render ExpenseList with empty message 1`] = `
 
 exports[`Should render ExpenseList with expenses 1`] = `
 <div
-  className="content-container"
+  className="fieldgroup col-12 flex-column"
 >
   <div
-    className="d-flex justify-content-between bg-dark basic-input border text-light"
+    className="fieldgroup col-12 bg-dark basic-input border text-light py-3"
   >
     <div
-      className="pl-3 my-auto d-none d-md-block d-lg-none"
+      className="pl-1 my-auto d-none d-sm-block d-xl-none"
     >
       Expenses
     </div>
     <div
-      className="pl-3 my-auto d-md-none d-lg-block"
+      className="pl-1 my-auto d-sm-none d-xl-block"
     >
       Expense
     </div>
     <div
-      className="pr-3 my-auto d-md-none d-lg-block"
+      className="pr-1 my-auto d-sm-none d-xl-block"
     >
       Amount
     </div>

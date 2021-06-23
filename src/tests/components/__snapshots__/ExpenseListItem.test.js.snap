@@ -2,7 +2,7 @@
 
 exports[`Should render ExpenseListItem with expense 1`] = `
 <Link
-  className="d-flex flex-lg-row flex-sm-column justify-content-between px-3 border border-top-0"
+  className="col-12 fieldgroup flex-xl-row flex-sm-column border border-top-0"
   to="/edit/1"
 >
   <div

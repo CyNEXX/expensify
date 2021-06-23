@@ -16,29 +16,35 @@ exports[`Should render EditExpensePage correctly 1`] = `
   <div
     className="content-container my-4"
   >
-    <ExpenseForm
-      editForm={true}
-      expense={
-        Object {
-          "amount": 4500,
-          "createdAt": 345600000,
-          "description": "creditcard",
-          "id": "3",
-          "note": "",
-        }
-      }
-      onSubmit={[Function]}
-    />
-  </div>
-  <div
-    className="content-container"
-  >
-    <button
-      className="btn btn-darkdanger"
-      onClick={[Function]}
+    <div
+      className="d-flex flex-column"
     >
-      Remove Expense
-    </button>
+      <div>
+        <ExpenseForm
+          editForm={true}
+          expense={
+            Object {
+              "amount": 4500,
+              "createdAt": 345600000,
+              "description": "creditcard",
+              "id": "3",
+              "note": "",
+            }
+          }
+          onSubmit={[Function]}
+        />
+      </div>
+      <div
+        className="col-sm-12 col-xl-3"
+      >
+        <button
+          className="btn btn-darkred w-100"
+          onClick={[Function]}
+        >
+          Remove Expense
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 `;
